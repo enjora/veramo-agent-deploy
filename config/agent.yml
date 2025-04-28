@@ -222,7 +222,7 @@ didResolver:
 ethr-did-resolver:
   $require: ethr-did-resolver?t=function&p=/ethr#getResolver
   $args:
-    - infuraProjectId: /constants/infuraProjectId
+    - infuraProjectId: f976dd4df1424441b4b7c153349e51c3
 
 web-did-resolver:
   $require: web-did-resolver?t=function&p=/web#getResolver
@@ -275,7 +275,7 @@ didManager:
           $args:
             - defaultKms: local
               network: mainnet
-              rpcUrl: /constants/infuraMainUrl
+              rpcUrl: https://mainnet.infura.io/v3/f976dd4df1424441b4b7c153349e51c3
               gas: 1000001
               ttl: 31104001
         did:ethr:goerli:
@@ -283,7 +283,7 @@ didManager:
           $args:
             - defaultKms: local
               network: goerli
-              rpcUrl: /constants/infuraGoerliUrl
+              rpcUrl: https://rinkeby.infura.io/v3/f976dd4df1424441b4b7c153349e51c3
               gas: 1000001
               ttl: 31104001
         did:cheqd:mainnet:
