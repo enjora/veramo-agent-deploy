@@ -25,6 +25,12 @@ constants:
     $env: CHEQD_TESTNET_RPC_URL
   cheqdMainnetRpcUrl:
     $env: CHEQD_MAINNET_RPC_URL
+  infuraProjectId:
+    $env: INFURA_PROJECT_ID
+  infuraMainUrl:
+    $env: INFURA_MAIN_URL
+  infuraGoerliUrl:
+    $env: INFURA_GOERLI_URL
   methods:
     - keyManagerGetKeyManagementSystems
     - keyManagerCreate
@@ -216,7 +222,7 @@ didResolver:
 ethr-did-resolver:
   $require: ethr-did-resolver?t=function&p=/ethr#getResolver
   $args:
-    - infuraProjectId: 5ffc47f65c4042ce847ef66a3fa70d4c
+    - infuraProjectId: /constants/infuraProjectId
 
 web-did-resolver:
   $require: web-did-resolver?t=function&p=/web#getResolver
@@ -269,7 +275,7 @@ didManager:
           $args:
             - defaultKms: local
               network: mainnet
-              rpcUrl: https://mainnet.infura.io/v3/5ffc47f65c4042ce847ef66a3fa70d4c
+              rpcUrl: /constants/infuraMainUrl
               gas: 1000001
               ttl: 31104001
         did:ethr:goerli:
@@ -277,7 +283,7 @@ didManager:
           $args:
             - defaultKms: local
               network: goerli
-              rpcUrl: https://rinkeby.infura.io/v3/5ffc47f65c4042ce847ef66a3fa70d4c
+              rpcUrl: /constants/infuraGoerliUrl
               gas: 1000001
               ttl: 31104001
         did:cheqd:mainnet:
