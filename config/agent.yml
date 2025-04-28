@@ -286,6 +286,14 @@ didManager:
               rpcUrl: https://goerli.infura.io/v3/f976dd4df1424441b4b7c153349e51c3
               gas: 1000001
               ttl: 31104001
+        did:ethr:sepolia:
+          $require: "@veramo/did-provider-ethr#EthrDIDProvider"
+          $args:
+            - defaultKms: local
+              network: sepolia
+              rpcUrl: https://sepolia.infura.io/v3/f976dd4df1424441b4b7c153349e51c3
+              gas: 1000001
+              ttl: 31104001
         did:cheqd:mainnet:
           $require: '@cheqd/did-provider-cheqd#CheqdDIDProvider'
           $args:
